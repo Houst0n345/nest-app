@@ -9,7 +9,9 @@ import { TopPageModel } from './top-page.model';
     TypegooseModule.forFeature([
       {
         typegooseClass: TopPageModel,
-        schemaOptions: { collection: 'TopModel' },
+        schemaOptions: {
+          collection: 'TopPage',
+        },
       },
     ]),
   ],

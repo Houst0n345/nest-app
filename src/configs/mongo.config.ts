@@ -10,9 +10,9 @@ export const getMongoConfig = async (
   };
 };
 
-const getMongoString = (configService: ConfigService) => {
+const getMongoString = (configService: ConfigService): string => {
   return (
-    'mongoDB://' +
+    'mongodb://' +
     configService.get('MONGO_LOGIN') +
     ':' +
     configService.get('MONGO_PASSWORD') +
@@ -28,7 +28,6 @@ const getMongoString = (configService: ConfigService) => {
 const getMongoOptions = () => {
   return {
     useNewUrlParser: true,
-    useCreateIndex: true,
     useUnifiedTopology: true,
   };
 };
